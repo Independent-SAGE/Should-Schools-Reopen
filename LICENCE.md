@@ -12,7 +12,7 @@ All Hybrid Publishing Consortium Software as GPL 3.0
 
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
-All contributions to third party software as respective OSI compliant licences-
+All contributions to third party software as respective OSI compliant licences
 
 ## All Consortium content and designs
 
