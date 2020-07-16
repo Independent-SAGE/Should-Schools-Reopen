@@ -1,5 +1,7 @@
 # Should Schools Reopen? Interim Findings and Concerns
 
+Read here: https://independent-sage.github.io/Should-Schools-Reopen/
+
 Draft Document for Public Discussion
 
 The Independent SAGE Report 2
@@ -9,8 +11,6 @@ The Independent Scientific Advisory Group for Emergencies (SAGE)
 Submitted to The UK Government and the People of Great Britain &amp; Northern Ireland by Sir David King, former Chief Scientific Adviser, UK Government, Chair of Independent SAGE
 
 May 22, 2020
-
-Read here: https://github.io/Independent-SAGE/Should-Schools-Reopen
 
 ISBN print and PDF: 978-1-906496-76-0<br />
 ISBN ebook: 978-1-906496-97-5
