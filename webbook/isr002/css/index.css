@@ -1,0 +1,661 @@
+-@font-face {
+    font-family: "noto sans", helvetica neue, arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/NotoSans-Regular.ttf);
+}
+-@font-face {
+    font-family: "noto sans", helvetica neue, arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    src: url(../fonts/NotoSans-Italic.ttf);
+}
+-@font-face {
+    font-family: "noto sans", helvetica neue, arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    src: url(../fonts/NotoSans-SemiBold.tff);
+}
+-@font-face {
+    font-family: "noto sans", helvetica neue, arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/NotoSans-SemiBoldItalic.tff);
+}
+-@font-face {
+    font-family: "noto sans", helvetica neue, arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    src: url(../fonts/NotoSans-Medium.ttf);
+}
+-@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    src: url(../fonts/IBMPlexSans-Bold.ttf);
+}
+-@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/IBMPlexSans-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/IBMPlexSans-Regular.ttf);
+}
+@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    src: url(../fonts/IBMPlexSans-Italic.ttf);
+}
+-@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    src: url(../fonts/IBMPlexSans-Medium.ttf);
+}
+
+-@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-style: bold;
+    font-style: normal;
+    src: url(../fonts/IBMPlexSans-SemiBold.ttf);
+}
+-@font-face {
+    font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+    font-style: bold;
+    font-style: italic;
+    src: url(../fonts/IBMPlexSans-SemiBoldItalic.ttf);
+}
+
+@page {
+  size: 170mm 244mm;
+  margin-top: 15mm;
+  margin-bottom: 15mm;
+  @top-left {
+    content: normal !important;
+  }
+  @bottom-left {
+    content: "" !important;
+  }
+  @top-right {
+     content: none !important;
+  }
+  @bottom-center {
+    content: none !important;
+  }
+  @bottom-right {
+    content: none !important;
+  }
+}
+
+/*body {
+  break-before: recto;
+}*/
+@page :first {
+  size: 170mm 244mm;
+  background: white;
+  margin: 0;
+
+}
+
+@page :first {
+	@bottom-left { content: normal; }
+	@bottom-right { content: normal; }
+	@top-center { content: normal; }
+}
+
+.coverpage {
+  position: absolute;
+  /*width: 244mm;
+  height: 170mm;*/
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  background-image: url("../images/cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*top: -25mm;
+  left: -20mm;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.backpage {
+  break-before: page;
+  position: absolute;
+  width: 130%;
+  height: 120%;
+  background-color: rgb(220,208,197);
+  top: -25mm;
+  left: -20mm;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-end;*/
+  z-index: 10;
+}
+
+.backpage #backcontent { min-height: calc(100vh - 100px); }
+.backpage .backtext p { margin-left: 20mm; font-size: 8pt; }
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: "noto sans", helvetica neue, arial, sans-serif;
+  font-weight: 500;
+  font-size: 10.75pt;
+  color: black;
+  text-rendering: optimizeLegibility;
+  /*-webkit-font-smoothing: antialiased;*/
+  overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+section#pagetitle {
+  break-before: page;
+  break-after: page;
+  font-size: 20px;
+  font-family: "noto sans", helvetica neue, arial, sans-serif;
+  text-align: center;
+}
+section#pagetitle h3 {
+color: black;
+}
+section#pagetitle p {
+text-align: center;
+}
+
+section#copyright {
+  break-before: page;
+  break-after: page;
+  font-family: "noto sans", helvetica neue, arial, sans-serif;
+}
+section#copyright p {
+font-size: 8pt;
+}
+
+nav {
+  break-before: recto;
+}
+
+nav li a {
+  display: inline-flex;
+  width: 100%;
+  text-decoration: none;
+  color: currentColor;
+  align-items: baseline;
+  font-size: 9pt;
+}
+nav li a::before {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-bottom: 1px dotted;
+  content: "";
+  order: 1;
+  flex: auto;
+}
+nav li a::after {
+ text-align: right;
+ content: target-counter(attr(href), page);
+ align-self: flex-end;
+ flex: none;
+ order: 2;
+}
+
+nav li.libackpage {
+ display: none!important;
+}
+
+nav ol {
+  list-style-position: outside;
+  list-style-type: none;
+  padding-left: 0;
+}
+nav ol ol {
+  padding-left: 20px;
+}
+
+nav ol li {
+  font-family: "noto sans", helvetica neue, arial, sans-serif;
+  margin-top: 0.3em;
+  color: black;
+  margin-left: 0;
+  text-indent: 0;
+  letter-spacing: 0.2pt;
+  word-spacing: 0px;
+  font-size: 9pt;
+}
+
+ol >li > a {
+  font-weight: bold;
+  font-size: 9pt;
+  border-bottom: none;
+}
+
+ol >li > ol > li > a {
+  font-weight: normal;
+  border-bottom: none;
+}
+
+pre {
+  max-width: 80.1266666667mm;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dashed rgb(101,100,98);
+}
+
+.article-title, h1 {
+  font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+  font-size: 24pt;
+  color: #000;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  page-break-inside: avoid;
+  text-align: center;
+  text-transform: none;
+  adobe-hyphenate: none;
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
+  letter-spacing: 0pt;
+  word-spacing: 1px;
+  font-weight: 600;
+}
+
+h1 strong { font-weight: normal;}
+h2, h2 strong {
+font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+margin-top: 1.5em;
+color: #000;
+font-weight: normal;
+}
+h3, h3 strong,
+h4, h4 strong,
+h5,
+h6 {
+  font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+  margin-top: 1.5em;
+  color: #000;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 15pt;
+  line-height: 21pt;
+  font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+  text-transform: none;
+  font-weight: 500;
+  /*margin: 1.5em 0 1.2em 0;*/
+  margin-top: 20pt;
+  margin-bottom: 9pt;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 13pt;
+  margin-top: 20pt;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+  font-weight: 500;
+  margin-bottom: 9pt;
+}
+
+h4 {
+  font-size: 10.5pt;
+  margin-top: 20pt;
+  margin-bottom: 9pt;
+  font-weight: 500;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+h5 {
+  font-family: "IBM Plex Sans", helvetica neue, arial, sans-serif;
+  font-weight: 500;
+  font-size: 9pt;
+  margin-top: 20pt;
+  margin-bottom: 5pt;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    }
+
+hr.br { border:0; height: 0px; }
+
+p {
+  font-family: "noto sans", helvetica neue, arial, sans-serif;
+  font-size: 9.5pt;
+  font-weight: 500;
+  line-height: 15pt;
+  text-align: justify;
+  margin-bottom: 0pt;
+  letter-spacing: 0.2pt;
+  word-spacing: 0.2pt;
+  orphans: 2;
+  widows: 2;
+  overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 10 4 4;
+
+  /*-webkit-hyphens: auto;
+       -webkit-hyphenate-limit-before: 3;
+       -webkit-hyphenate-limit-after: 3;
+       -webkit-hyphenate-limit-chars: 6 3 3;
+       -webkit-hyphenate-limit-lines: 2;
+       -webkit-hyphenate-limit-last: always;
+       -webkit-hyphenate-limit-zone: 8%;
+       -moz-hyphens: auto;
+       -moz-hyphenate-limit-chars: 6 3 3;
+       -moz-hyphenate-limit-lines: 2;
+       -moz-hyphenate-limit-last: always;
+       -moz-hyphenate-limit-zone: 8%;
+       -ms-hyphens: auto;
+       -ms-hyphenate-limit-chars: 6 3 3;
+       -ms-hyphenate-limit-lines: 2;
+       -ms-hyphenate-limit-last: always;
+       -ms-hyphenate-limit-zone: 8%;
+       hyphens: auto;
+       hyphenate-limit-chars: 6 3 3;
+       hyphenate-limit-lines: 2;
+       hyphenate-limit-last: always;
+       hyphenate-limit-zone: 8%;*/
+}
+
+p + p {
+  text-indent: 0;
+  margin-top: 9pt; }
+
+section > h2:first-child, nav > h2:first-child {
+  margin-top: 0; }
+
+ol {
+   display: block;
+   list-style-type: decimal;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 20px;
+   /*font-size: 9pt;
+   line-height: 14pt;*/
+   hyphens: none;
+ }
+ ol li {
+   margin-bottom: 0.5em;
+ }
+
+ ul {
+   display: block;
+   list-style-type: disc;
+   margin-top: 9pt;
+   margin-bottom: 9pt;
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 20px;
+   hyphens: none;
+ }
+
+
+
+.user-contents {
+    font-family: 'Noticia Text', serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    /*text-align: justify;*/
+    word-wrap: break-word;
+}
+
+.article-authors, .article-keywords {
+    line-height: 1.6em;
+}
+
+.article-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.article-subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.article-abstract {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.article-part.metadata {
+    margin-bottom: 20px;
+}
+
+.pagination-footnote:before,
+.pagination-footnote > * > *:first-child:before {
+    font-family: 'Noticia Text', serif;
+    font-weight: 400;
+    font-size: 9px;
+    text-align: left;
+    vertical-align: super;
+    line-height: 0;
+}
+
+.pagination-footnote > * > *:first-child:before {
+    margin-right: 5px;
+}
+
+.pagination-footnote > * > * {
+    font-family: 'Noticia Text', serif;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.pagination-pagenumber {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pagination-footnotes {
+    margin-top: 25px;
+}
+
+.user-contents h1,
+.user-contents h2,
+.user-contents h3,
+.user-contents h4,
+.user-contents h5,
+.user-contents h6,
+.user-contents p,
+.user-contents blockquote,
+.user-contents code,
+.user-contents ol,
+.user-contents ul {
+    margin-bottom: 35px;
+}
+
+.user-contents h1,
+.user-contents h2,
+.user-contents h3,
+.user-contents h4,
+.user-contents h5,
+.user-contents h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    line-height: 1.25em;
+}
+
+.user-contents h1  {
+    font-size: 36px;
+}
+
+.user-contents h2 {
+    font-size: 32px;
+}
+
+.user-contents h3 {
+    font-size: 28px;
+}
+
+.user-contents h4 {
+    font-size: 26px;
+    font-style: italic;
+}
+
+.user-contents h5 {
+    font-size: 24px;
+    font-variant: small-caps;
+}
+
+
+.user-contents h6 {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+
+.user-contents p,
+.user-contents ol li,
+.user-contents ul li {
+    font-size: 16px;
+    line-height: 1.75em;
+}
+
+.user-contents strong {
+    font-weight: 700;
+}
+
+.user-contents em {
+    font-style: italic;
+}
+
+.user-contents ul,
+.user-contents ol {
+    padding-left: 15px;
+}
+.user-contents ul {
+    list-style: square;
+}
+
+.user-contents ol {
+    list-style: decimal;
+}
+
+.user-contents blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 13px;
+    line-height: 1.8em;
+}
+
+.user-contents code {
+    display: block;
+    font-family: "Courier New", Courier, mono-space;
+    font-size: 13px;
+    line-height: 1.75em;
+}
+
+.article-bibliography p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.equation {
+    font-size: 80%;
+}
