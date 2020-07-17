@@ -19,6 +19,8 @@ ISBN ebook: 978-1-906496-97-5
 
 Independent SAGE © 2020 The authors. Creative Commons Attribution-ShareAlike 4.0 [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
 
+Technical production: indie_SAGE Technical Publishing Working Group #iSTPWG [https://github.com/Independent-SAGE/Technical-Publishing-Working-Group/issues](https://github.com/Independent-SAGE/Technical-Publishing-Working-Group/issues)
+
 ## What is the Independent SAGE?
 
 ‘We are following the ​science’ is the message the British public have
