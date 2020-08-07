@@ -15,7 +15,7 @@ May 22, 2020
 ISBN print and PDF: 978-1-906496-76-0<br />
 ISBN ebook: 978-1-906496-97-5
 
-[DOI 10.5281/zenodo.3935529](https://doi.org/10.5281/zenodo.3935529)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3935529.svg)](https://doi.org/10.5281/zenodo.3935529)
 
 Independent SAGE © 2020 The authors. Creative Commons Attribution-ShareAlike 4.0 [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
 
