@@ -6,9 +6,9 @@ All report content: Independent SAGE © 2020 The authors. Creative Commons Attri
 
 https://creativecommons.org/licenses/by-sa/4.0/
 
-## Hybrid Publishing Consortium Software and third party software contributions
+## Software and third party software contributions
 
-All Hybrid Publishing Consortium Software as GPL 3.0
+© 2020 The authors. All Software as GPL 3.0
 
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
