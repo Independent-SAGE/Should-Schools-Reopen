@@ -1,4 +1,4 @@
-# Licence
+# Licence and copyright
 
 ## Report content
 
